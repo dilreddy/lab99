@@ -89,7 +89,7 @@ cars.RowKey = '003'
 cars.description = '2017'
 cars.cost = 12
 table_service.insert_entity('itemstable', cars)
-print('Created entry for Hawaiian...\n')
+print('Created entry for 2017...\n')
 
 # A partition key tracks how like-minded entries in the Table are created and queried.
 # A row key is a unique ID for each entity in the partition
@@ -123,7 +123,7 @@ raw_input('Press Enter to continue...')
 
 # In this query, you define the partition key to search within, and then which properties to retrieve
 # Structuring queries like this improves performance as your application scales up and keeps the queries efficient
-items = table_service.query_entities('itemstable', filter="PartitionKey eq 'carsmenu'", select='description,cost')
+items = table_service.query_entities('itemstable', filter="PartitionKey eq 'cars'", select='description,cost')
 for item in items:
     print('Name: ' + item.description)
     print('Cost: ' + str(item.cost) + '\n')
