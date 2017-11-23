@@ -91,7 +91,21 @@ cars.cost = 12
 table_service.insert_entity('itemstable', cars)
 print('Created entry for 2017...\n')
 
+cars = Entity()
+cars.PartitionKey = 'cars'
+cars.RowKey = '004'
+cars.description = 'Grey'
+cars.cost = 13
+table_service.insert_entity('itemstable', cars)
+print('Created entry for Grey...\n')
 
+cars = Entity()
+cars.PartitionKey = 'cars'
+cars.RowKey = '005'
+cars.description = '50000'
+cars.cost = 34
+table_service.insert_entity('itemstable', cars)
+print('Created entry for 50000...\n')
 
 # A partition key tracks how like-minded entries in the Table are created and queried.
 # A row key is a unique ID for each entity in the partition
