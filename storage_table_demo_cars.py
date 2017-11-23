@@ -96,7 +96,7 @@ print('Created entry for 2017...\n')
 # These two properties are used as a primary key to index the Table. This makes queries much quicker.
 
 coffee = Entity()
-coffee.PartitionKey = 'coffeeshop'
+coffee.PartitionKey = 'coffeestore'
 coffee.RowKey = '005'
 coffee.sku = 'BLK203123'
 coffee.item = 'starbucks'
